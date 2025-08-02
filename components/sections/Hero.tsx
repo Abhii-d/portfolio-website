@@ -100,7 +100,6 @@ export default function Hero() {
               onClick={scrollToProjects}
               className="btn-primary text-lg px-8 py-3 group"
             >
-              <span className="mr-2">🚀</span>
               View My Work
               <span className="ml-2 group-hover:translate-x-1 transition-transform">
                 →
@@ -110,7 +109,6 @@ export default function Hero() {
               onClick={scrollToContact}
               className="btn-outline text-lg px-8 py-3 group"
             >
-              <span className="mr-2">💬</span>
               Let's Talk
               <span className="ml-2 group-hover:scale-110 transition-transform">
                 📧

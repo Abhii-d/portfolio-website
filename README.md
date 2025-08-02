@@ -176,13 +176,10 @@ NEXT_PUBLIC_SITE_URL=https://your-portfolio-url.com
 
 **Abhishek Dongare**
 
-- Email: abhishek.dongare@example.com
-- LinkedIn: [linkedin.com/in/abhishek-dongare](https://linkedin.com/in/abhishek-dongare)
-- GitHub: [github.com/abhishek-dongare](https://github.com/abhishek-dongare)
+- Email: abhi.dongare.personal@example.com
+- LinkedIn: [https://www.linkedin.com/in/abhishek-dongare-bb066a191/](https://www.linkedin.com/in/abhishek-dongare-bb066a191/)
+- GitHub: [https://github.com/Abhii-d](https://github.com/Abhii-d)
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 

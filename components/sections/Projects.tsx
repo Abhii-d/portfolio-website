@@ -5,13 +5,12 @@ export default function Projects() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <span className="text-4xl mb-4 block">🚀</span>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               Featured Projects
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               A showcase of my recent work and side projects that demonstrate my
-              skills and passion for development 💻
+              skills and passion for development
             </p>
           </div>
 
@@ -22,23 +21,25 @@ export default function Projects() {
               <div className="card p-8 hover:shadow-xl transition-all duration-300 border-2 border-primary-100">
                 <div className="flex items-start justify-between mb-4">
                   <span className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">
-                    <span className="mr-1">⭐</span>
                     Featured Project
                   </span>
                   <div className="flex space-x-2">
-                    <button className="p-2 hover:bg-primary-50 rounded-full transition-colors">
-                      <span className="text-xl">🔗</span>
+                    <button className="p-2 hover:bg-primary-50 rounded-full transition-colors text-slate-400 hover:text-primary-500">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
                     </button>
-                    <button className="p-2 hover:bg-primary-50 rounded-full transition-colors">
-                      <span className="text-xl">💻</span>
+                    <button className="p-2 hover:bg-primary-50 rounded-full transition-colors text-slate-400 hover:text-primary-500">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                      </svg>
                     </button>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-3xl font-bold text-slate-900 mb-4 flex items-center">
-                      <span className="mr-3">🤖</span>
+                    <h3 className="text-3xl font-bold text-slate-900 mb-4">
                       Telegram Protein Alerts Bot
                     </h3>
                     
@@ -50,22 +51,21 @@ export default function Projects() {
 
                     <div className="space-y-4 mb-6">
                       <div>
-                        <h4 className="font-semibold text-slate-900 mb-2 flex items-center">
-                          <span className="mr-2">✨</span>
+                        <h4 className="font-semibold text-slate-900 mb-3">
                           Key Features
                         </h4>
-                        <ul className="space-y-1 text-slate-600">
-                          <li className="flex items-center">
-                            <span className="mr-2">📊</span>
-                            Real-time price monitoring
+                        <ul className="space-y-2 text-slate-600">
+                          <li className="flex items-start space-x-2">
+                            <span className="text-primary-500 mt-1">•</span>
+                            <span>Real-time price monitoring</span>
                           </li>
-                          <li className="flex items-center">
-                            <span className="mr-2">🎯</span>
-                            Personalized threshold alerts
+                          <li className="flex items-start space-x-2">
+                            <span className="text-primary-500 mt-1">•</span>
+                            <span>Personalized threshold alerts</span>
                           </li>
-                          <li className="flex items-center">
-                            <span className="mr-2">👥</span>
-                            User subscription management
+                          <li className="flex items-start space-x-2">
+                            <span className="text-primary-500 mt-1">•</span>
+                            <span>User subscription management</span>
                           </li>
                         </ul>
                       </div>
@@ -73,14 +73,12 @@ export default function Projects() {
 
                     <div className="flex gap-3">
                       <button className="btn-primary group">
-                        <span className="mr-2">👀</span>
                         View Details
                         <span className="ml-2 group-hover:translate-x-1 transition-transform">
                           →
                         </span>
                       </button>
                       <button className="btn-outline group">
-                        <span className="mr-2">💻</span>
                         View Code
                         <span className="ml-2 group-hover:scale-110 transition-transform">
                           ↗
@@ -90,9 +88,13 @@ export default function Projects() {
                   </div>
 
                   <div>
-                    <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-lg p-6 h-full flex items-center justify-center">
+                    <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-lg p-8 h-full flex items-center justify-center">
                       <div className="text-center">
-                        <span className="text-6xl mb-4 block">🤖</span>
+                        <div className="w-16 h-16 bg-primary-200 rounded-lg flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                          </svg>
+                        </div>
                         <p className="text-primary-700 font-medium">
                           Telegram Bot Interface
                         </p>
@@ -128,13 +130,21 @@ export default function Projects() {
             {/* Other Projects */}
             <div className="card p-6 hover:shadow-lg transition-shadow duration-300">
               <div className="flex items-center justify-between mb-4">
-                <span className="text-3xl">🛒</span>
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                  </svg>
+                </div>
                 <div className="flex space-x-2">
-                  <button className="text-slate-400 hover:text-primary-500">
-                    <span className="text-lg">🔗</span>
+                  <button className="text-slate-400 hover:text-primary-500 p-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
                   </button>
-                  <button className="text-slate-400 hover:text-primary-500">
-                    <span className="text-lg">💻</span>
+                  <button className="text-slate-400 hover:text-primary-500 p-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
                   </button>
                 </div>
               </div>
@@ -161,11 +171,9 @@ export default function Projects() {
               
               <div className="flex gap-2">
                 <button className="btn-outline text-sm flex-1">
-                  <span className="mr-1">👀</span>
                   View
                 </button>
                 <button className="btn-primary text-sm flex-1">
-                  <span className="mr-1">💻</span>
                   Code
                 </button>
               </div>
@@ -173,13 +181,21 @@ export default function Projects() {
 
             <div className="card p-6 hover:shadow-lg transition-shadow duration-300">
               <div className="flex items-center justify-between mb-4">
-                <span className="text-3xl">📋</span>
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                </div>
                 <div className="flex space-x-2">
-                  <button className="text-slate-400 hover:text-primary-500">
-                    <span className="text-lg">🔗</span>
+                  <button className="text-slate-400 hover:text-primary-500 p-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
                   </button>
-                  <button className="text-slate-400 hover:text-primary-500">
-                    <span className="text-lg">💻</span>
+                  <button className="text-slate-400 hover:text-primary-500 p-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
                   </button>
                 </div>
               </div>
@@ -206,11 +222,9 @@ export default function Projects() {
               
               <div className="flex gap-2">
                 <button className="btn-outline text-sm flex-1">
-                  <span className="mr-1">👀</span>
                   Demo
                 </button>
                 <button className="btn-primary text-sm flex-1">
-                  <span className="mr-1">💻</span>
                   Code
                 </button>
               </div>
@@ -220,7 +234,6 @@ export default function Projects() {
           {/* View More */}
           <div className="text-center mt-12">
             <button className="btn-outline text-lg px-8 py-3 group">
-              <span className="mr-2">📂</span>
               View All Projects
               <span className="ml-2 group-hover:translate-x-1 transition-transform">
                 →

@@ -4,23 +4,19 @@
       "id": "cimpress-senior",
       "company": "Cimpress",
       "position": "Senior Software Developer",
-      "duration": "2024 - Present",
+      "duration": "July 2025 - Present",
       "location": "Remote",
       "description": "Recently promoted to Senior Software Developer role, focusing on backend architecture and system scalability.",
       "achievements": [
         "Promoted to Senior Software Developer in 2024",
         "Architected and implemented scalable backend systems",
-        "Mentored junior developers and led technical initiatives",
-        "Improved system performance by 40% through optimization"
+        "Mentored junior developers"
       ],
       "technologies": [
         "Node.js",
         "TypeScript",
         "PostgreSQL",
         "AWS",
-        "Docker",
-        "Kubernetes",
-        "Redis",
         "Express.js"
       ],
       "companyUrl": "https://cimpress.com",
@@ -30,7 +26,7 @@
       "id": "cimpress-developer",
       "company": "Cimpress",
       "position": "Software Developer",
-      "duration": "2022 - 2024",
+      "duration": "Aug 2023 - June 2025",
       "location": "Remote",
       "description": "Focused on backend development and API design for high-traffic applications.",
       "achievements": [
@@ -52,17 +48,13 @@
       "isCurrentRole": false
     },
     {
-      "id": "previous-company",
-      "company": "Previous Company",
-      "position": "Junior Software Developer",
-      "duration": "2020 - 2022",
-      "location": "India",
+      "id": "intern-company",
+      "company": "Cimpress",
+      "position": "Software Developer Intern",
+      "duration": "Feb 2023 - Junly 2023",
+      "location": "Remote",
       "description": "Started my career in software development, learning foundational technologies and best practices.",
       "achievements": [
-        "Built responsive web applications using modern frameworks",
-        "Collaborated with senior developers on feature development",
-        "Learned industry best practices and coding standards",
-        "Contributed to code reviews and knowledge sharing sessions"
       ],
       "technologies": [
         "JavaScript",
