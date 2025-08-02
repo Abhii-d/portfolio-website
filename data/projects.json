@@ -1,0 +1,142 @@
+{
+  "projects": [
+    {
+      "id": "telegram-protein-bot",
+      "name": "Telegram Protein Alerts Bot",
+      "description": "Automated bot that monitors protein supplement prices and sends real-time discount alerts to users via Telegram.",
+      "longDescription": "A sophisticated automation system that scrapes multiple e-commerce platforms for protein supplement deals, processes pricing data, and delivers personalized notifications to subscribers through Telegram's Bot API. Features include price tracking, threshold alerts, and user preference management.",
+      "technologies": [
+        "Node.js",
+        "TypeScript",
+        "Telegram Bot API",
+        "Web Scraping",
+        "AWS Lambda",
+        "DynamoDB",
+        "CloudWatch"
+      ],
+      "features": [
+        "Real-time price monitoring across multiple platforms",
+        "Personalized discount threshold alerts",
+        "User subscription management",
+        "Automated daily price reports",
+        "Product category filtering",
+        "Price history tracking"
+      ],
+      "challenges": [
+        "Handling rate limits and anti-bot measures",
+        "Ensuring reliable data extraction from dynamic websites",
+        "Managing user preferences and notification scheduling"
+      ],
+      "liveUrl": "",
+      "githubUrl": "https://github.com/abhishek-dongare/telegram-protein-bot",
+      "imageUrl": "/images/projects/telegram-bot.jpg",
+      "featured": true,
+      "status": "completed",
+      "category": "automation"
+    },
+    {
+      "id": "ecommerce-api",
+      "name": "E-commerce REST API",
+      "description": "Scalable REST API for e-commerce platform with advanced features like inventory management and payment processing.",
+      "longDescription": "A comprehensive backend solution for e-commerce applications built with Node.js and PostgreSQL. Includes user authentication, product catalog management, shopping cart functionality, order processing, and payment integration.",
+      "technologies": [
+        "Node.js",
+        "TypeScript",
+        "Express.js",
+        "PostgreSQL",
+        "Redis",
+        "JWT",
+        "Stripe API",
+        "Docker"
+      ],
+      "features": [
+        "User authentication and authorization",
+        "Product catalog with search and filtering",
+        "Shopping cart and wishlist functionality",
+        "Order management system",
+        "Payment processing with Stripe",
+        "Inventory tracking and management",
+        "Admin dashboard API endpoints"
+      ],
+      "challenges": [
+        "Implementing secure payment processing",
+        "Optimizing database queries for large catalogs",
+        "Handling concurrent inventory updates"
+      ],
+      "liveUrl": "",
+      "githubUrl": "https://github.com/abhishek-dongare/ecommerce-api",
+      "imageUrl": "/images/projects/ecommerce-api.jpg",
+      "featured": true,
+      "status": "completed",
+      "category": "backend"
+    },
+    {
+      "id": "task-manager-app",
+      "name": "Task Manager Application",
+      "description": "Full-stack task management application with real-time collaboration features.",
+      "longDescription": "A modern task management solution built with React and Node.js, featuring real-time updates, team collaboration, and project organization. Includes drag-and-drop interfaces, deadline tracking, and notification systems.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Socket.io",
+        "MongoDB",
+        "Express.js",
+        "Tailwind CSS",
+        "JWT"
+      ],
+      "features": [
+        "Real-time task updates with Socket.io",
+        "Drag-and-drop task organization",
+        "Team collaboration and permissions",
+        "Project and milestone tracking",
+        "Email and in-app notifications",
+        "File attachments and comments",
+        "Responsive design for all devices"
+      ],
+      "challenges": [
+        "Implementing real-time synchronization",
+        "Managing complex state updates",
+        "Optimizing performance with large datasets"
+      ],
+      "liveUrl": "https://taskmanager-demo.vercel.app",
+      "githubUrl": "https://github.com/abhishek-dongare/task-manager",
+      "imageUrl": "/images/projects/task-manager.jpg",
+      "featured": true,
+      "status": "completed",
+      "category": "web"
+    },
+    {
+      "id": "portfolio-website",
+      "name": "Portfolio Website",
+      "description": "Modern, responsive portfolio website built with Next.js and TypeScript.",
+      "longDescription": "A minimalist portfolio website showcasing projects and experience, built with modern web technologies. Features dark mode, responsive design, and optimized performance.",
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Vercel"
+      ],
+      "features": [
+        "Responsive design for all devices",
+        "Dark/light mode toggle",
+        "Optimized performance and SEO",
+        "Contact form with email integration",
+        "Project showcase with filtering",
+        "Smooth animations and transitions"
+      ],
+      "challenges": [
+        "Achieving perfect Lighthouse scores",
+        "Implementing accessible design patterns",
+        "Optimizing for various screen sizes"
+      ],
+      "liveUrl": "",
+      "githubUrl": "https://github.com/abhishek-dongare/portfolio",
+      "imageUrl": "/images/projects/portfolio.jpg",
+      "featured": false,
+      "status": "in-progress",
+      "category": "web"
+    }
+  ]
+}

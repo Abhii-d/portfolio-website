@@ -1,0 +1,14 @@
+{
+  "name": "Abhishek Dongare",
+  "title": "Senior Software Developer",
+  "bio": "Backend specialist at Cimpress with expertise in Node.js, TypeScript, and AWS technologies. Recently promoted to Senior Software Developer, I focus on building scalable systems and delivering high-quality solutions.",
+  "email": "abhishek.dongare@example.com",
+  "location": "India",
+  "profileImage": "/images/profile.jpg",
+  "resumeUrl": "/resume/abhishek-dongare-resume.pdf",
+  "social": {
+    "github": "https://github.com/abhishek-dongare",
+    "linkedin": "https://linkedin.com/in/abhishek-dongare",
+    "twitter": "https://twitter.com/abhishek_dongare"
+  }
+}

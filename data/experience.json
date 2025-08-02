@@ -1,0 +1,80 @@
+{
+  "experiences": [
+    {
+      "id": "cimpress-senior",
+      "company": "Cimpress",
+      "position": "Senior Software Developer",
+      "duration": "2024 - Present",
+      "location": "Remote",
+      "description": "Recently promoted to Senior Software Developer role, focusing on backend architecture and system scalability.",
+      "achievements": [
+        "Promoted to Senior Software Developer in 2024",
+        "Architected and implemented scalable backend systems",
+        "Mentored junior developers and led technical initiatives",
+        "Improved system performance by 40% through optimization"
+      ],
+      "technologies": [
+        "Node.js",
+        "TypeScript",
+        "PostgreSQL",
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "Redis",
+        "Express.js"
+      ],
+      "companyUrl": "https://cimpress.com",
+      "isCurrentRole": true
+    },
+    {
+      "id": "cimpress-developer",
+      "company": "Cimpress",
+      "position": "Software Developer",
+      "duration": "2022 - 2024",
+      "location": "Remote",
+      "description": "Focused on backend development and API design for high-traffic applications.",
+      "achievements": [
+        "Developed and maintained RESTful APIs serving millions of requests",
+        "Implemented automated testing strategies reducing bugs by 30%",
+        "Collaborated with cross-functional teams on product features",
+        "Optimized database queries resulting in 25% faster response times"
+      ],
+      "technologies": [
+        "Node.js",
+        "TypeScript",
+        "PostgreSQL",
+        "AWS",
+        "Express.js",
+        "Jest",
+        "Docker"
+      ],
+      "companyUrl": "https://cimpress.com",
+      "isCurrentRole": false
+    },
+    {
+      "id": "previous-company",
+      "company": "Previous Company",
+      "position": "Junior Software Developer",
+      "duration": "2020 - 2022",
+      "location": "India",
+      "description": "Started my career in software development, learning foundational technologies and best practices.",
+      "achievements": [
+        "Built responsive web applications using modern frameworks",
+        "Collaborated with senior developers on feature development",
+        "Learned industry best practices and coding standards",
+        "Contributed to code reviews and knowledge sharing sessions"
+      ],
+      "technologies": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "HTML",
+        "CSS",
+        "Git"
+      ],
+      "companyUrl": "",
+      "isCurrentRole": false
+    }
+  ]
+}
