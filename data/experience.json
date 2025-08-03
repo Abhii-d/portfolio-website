@@ -6,17 +6,23 @@
       "position": "Senior Software Developer",
       "duration": "July 2025 - Present",
       "location": "Remote",
-      "description": "Recently promoted to Senior Software Developer role, focusing on backend architecture and system scalability.",
+      "description": "Recently promoted to Senior Software Developer, leading backend initiatives to improve scalability, system performance, and feature expansion across critical order processing systems.",
       "achievements": [
-        "Promoted to Senior Software Developer in 2024",
-        "Architected and implemented scalable backend systems",
-        "Mentored junior developers"
+        "Promoted to Senior Software Developer in July 2025",
+        "Architected modular AWS Step Functions workflow to replace monolithic Lambdas, reducing order creation time by 50%",
+        "Enhanced order pipeline reliability with a retry system using PostgreSQL and AWS SQS, cutting manual intervention by 90%",
+        "Designed and deployed secure IVR-support API with Snowflake analytics integration for improved call center operations",
+        "Developed tax recalculation Lambda improving post-shipment tax accuracy by 20%",
+        "Mentored junior developers and supported technical decision-making in team architecture reviews"
       ],
       "technologies": [
         "Node.js",
         "TypeScript",
         "PostgreSQL",
-        "AWS",
+        "AWS Step Functions",
+        "AWS Lambda",
+        "AWS SQS",
+        "Snowflake",
         "Express.js"
       ],
       "companyUrl": "https://cimpress.com",
@@ -26,47 +32,49 @@
       "id": "cimpress-developer",
       "company": "Cimpress",
       "position": "Software Developer",
-      "duration": "Aug 2023 - June 2025",
+      "duration": "August 2023 - June 2025",
       "location": "Remote",
-      "description": "Focused on backend development and API design for high-traffic applications.",
+      "description": "Worked on critical backend systems for order workflows, multi-line product support, and legacy system decoupling, contributing to performance, maintainability, and customer experience.",
       "achievements": [
-        "Developed and maintained RESTful APIs serving millions of requests",
-        "Implemented automated testing strategies reducing bugs by 30%",
-        "Collaborated with cross-functional teams on product features",
-        "Optimized database queries resulting in 25% faster response times"
+        "Implemented Matrix Multi-Line Ordering system allowing agents to combine multiple products in a single order",
+        "Maintained backward compatibility with legacy systems while introducing new APIs for order modification",
+        "Built microservice to manage calendar-based order holds using event-driven triggers, reducing Oracle system dependency",
+        "Improved order event processing via a retry mechanism to minimize manual troubleshooting"
       ],
       "technologies": [
         "Node.js",
         "TypeScript",
         "PostgreSQL",
-        "AWS",
-        "Express.js",
-        "Jest",
-        "Docker"
+        "AWS Lambda",
+        "AWS SQS",
+        "AWS Step Functions",
+        "DynamoDB",
+        "Express.js"
       ],
       "companyUrl": "https://cimpress.com",
       "isCurrentRole": false
     },
     {
-      "id": "intern-company",
+      "id": "cimpress-intern",
       "company": "Cimpress",
-      "position": "Software Developer Intern",
-      "duration": "Feb 2023 - Junly 2023",
+      "position": "Software Engineering Intern",
+      "duration": "February 2023 - July 2023",
       "location": "Remote",
-      "description": "Started my career in software development, learning foundational technologies and best practices.",
+      "description": "Joined Cimpress as a backend engineering intern, contributing to backend testing, performance reliability, and system optimization.",
       "achievements": [
+        "Increased backend test coverage from 54.3% to over 80% by integrating SonarQube into CI pipelines",
+        "Resolved recurring payment failures by fixing alert triggers and improving DynamoDB consistency",
+        "Refactored legacy code for improved maintainability by removing outdated PRM logic"
       ],
       "technologies": [
-        "JavaScript",
-        "React",
         "Node.js",
-        "MongoDB",
-        "HTML",
-        "CSS",
-        "Git"
+        "TypeScript",
+        "DynamoDB",
+        "CI/CD",
+        "SonarQube"
       ],
-      "companyUrl": "",
+      "companyUrl": "https://cimpress.com",
       "isCurrentRole": false
     }
-  ]
+  ]  
 }

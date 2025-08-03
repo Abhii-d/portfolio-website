@@ -1,39 +1,41 @@
 {
   "projects": [
-    {
-      "id": "telegram-protein-bot",
-      "name": "Telegram Protein Alerts Bot",
-      "description": "Automated bot that monitors protein supplement prices and sends real-time discount alerts to users via Telegram.",
-      "longDescription": "A sophisticated automation system that scrapes multiple e-commerce platforms for protein supplement deals, processes pricing data, and delivers personalized notifications to subscribers through Telegram's Bot API. Features include price tracking, threshold alerts, and user preference management.",
-      "technologies": [
-        "Node.js",
-        "TypeScript",
-        "Telegram Bot API",
-        "Web Scraping",
-        "AWS Lambda",
-        "DynamoDB",
-        "CloudWatch"
-      ],
-      "features": [
-        "Real-time price monitoring across multiple platforms",
-        "Personalized discount threshold alerts",
-        "User subscription management",
-        "Automated daily price reports",
-        "Product category filtering",
-        "Price history tracking"
-      ],
-      "challenges": [
-        "Handling rate limits and anti-bot measures",
-        "Ensuring reliable data extraction from dynamic websites",
-        "Managing user preferences and notification scheduling"
-      ],
-      "liveUrl": "",
-      "githubUrl": "https://github.com/abhishek-dongare/telegram-protein-bot",
-      "imageUrl": "/images/projects/telegram-bot.jpg",
-      "featured": true,
-      "status": "completed",
-      "category": "automation"
-    },
+      {
+        "id": "mb-script-monitor",
+        "name": "MB Script - Muscle Blaze Price Monitor",
+        "description": "A Telegram-integrated price monitoring tool for MuscleBlaze supplements with smart alerts.",
+        "longDescription": "A TypeScript-based automation script that monitors price changes on MuscleBlaze whey protein products and sends Telegram alerts when thresholds are met. It includes smart price tracking, user notification, historical logging, error handling, and configurable environment setup. Designed for efficient deployment using PM2 or cron jobs, the script provides reliable price monitoring with minimal user effort.",
+        "technologies": [
+          "TypeScript",
+          "Node.js",
+          "Telegram Bot API",
+          "Web Scraping",
+          "PM2",
+          "dotenv",
+          "JavaScript",
+          "HTML"
+        ],
+        "features": [
+          "Real-time price tracking for MuscleBlaze supplements",
+          "Telegram alerts for percentage and absolute price drops",
+          "Scheduled monitoring with retry logic and failure handling",
+          "Historical price tracking with database support",
+          "User-configurable environment settings via .env",
+          "Supports both personal chat and Telegram channel alerts"
+        ],
+        "challenges": [
+          "Bypassing anti-bot scraping protections",
+          "Managing asynchronous Telegram notifications reliably",
+          "Scheduling precise monitoring intervals across deployment methods"
+        ],
+        "liveUrl": "",
+        "githubUrl": "https://github.com/Abhii-d/MB-script-main",
+        "imageUrl": "/images/projects/mb-script.jpg",
+        "featured": true,
+        "status": "completed",
+        "category": "automation"
+      }
+    ,
     {
       "id": "ecommerce-api",
       "name": "E-commerce REST API",
