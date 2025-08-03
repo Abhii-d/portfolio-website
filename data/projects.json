@@ -33,7 +33,12 @@
         "imageUrl": "/images/projects/mb-script.jpg",
         "featured": true,
         "status": "completed",
-        "category": "automation"
+        "category": "automation",
+        "icon": {
+          "viewBox": "0 0 24 24",
+          "path": "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z",
+          "color": "text-primary-600"
+        }
       }
     ,
     {
@@ -70,75 +75,84 @@
       "imageUrl": "/images/projects/ecommerce-api.jpg",
       "featured": true,
       "status": "completed",
-      "category": "backend"
+      "category": "backend",
+      "icon": {
+        "viewBox": "0 0 24 24",
+        "path": "M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2",
+        "color": "text-primary-600"
+      }
     },
     {
-      "id": "task-manager-app",
-      "name": "Task Manager Application",
-      "description": "Full-stack task management application with real-time collaboration features.",
-      "longDescription": "A modern task management solution built with React and Node.js, featuring real-time updates, team collaboration, and project organization. Includes drag-and-drop interfaces, deadline tracking, and notification systems.",
+      "id": "weather-app",
+      "name": "Weather App",
+      "description": "A TypeScript-based web app that displays real-time weather based on current or user-provided location.",
+      "longDescription": "An interactive frontend weather application built with TypeScript that fetches weather conditions based on the user's current geolocation or a text-based location input. It integrates free geolocation APIs and weather data services to provide accurate, up-to-date weather summaries with a user-friendly interface. Designed for simplicity and responsiveness, the app is deployed on Netlify and works across devices.",
       "technologies": [
-        "React",
         "TypeScript",
-        "Node.js",
-        "Socket.io",
-        "MongoDB",
-        "Express.js",
-        "Tailwind CSS",
-        "JWT"
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Geolocation API",
+        "OpenWeatherMap API"
       ],
       "features": [
-        "Real-time task updates with Socket.io",
-        "Drag-and-drop task organization",
-        "Team collaboration and permissions",
-        "Project and milestone tracking",
-        "Email and in-app notifications",
-        "File attachments and comments",
-        "Responsive design for all devices"
+        "Fetches weather data based on current geolocation",
+        "Supports manual city name input for weather lookup",
+        "Simple and clean user interface with live data",
+        "Responsive design for mobile and desktop devices",
+        "Error handling for invalid or unreachable locations"
       ],
       "challenges": [
-        "Implementing real-time synchronization",
-        "Managing complex state updates",
-        "Optimizing performance with large datasets"
+        "Accurately determining user location via browser APIs",
+        "Handling edge cases like missing or invalid city names",
+        "Integrating and formatting third-party weather data cleanly"
       ],
-      "liveUrl": "https://taskmanager-demo.vercel.app",
-      "githubUrl": "https://github.com/abhishek-dongare/task-manager",
-      "imageUrl": "/images/projects/task-manager.jpg",
-      "featured": true,
-      "status": "completed",
-      "category": "web"
-    },
-    {
-      "id": "portfolio-website",
-      "name": "Portfolio Website",
-      "description": "Modern, responsive portfolio website built with Next.js and TypeScript.",
-      "longDescription": "A minimalist portfolio website showcasing projects and experience, built with modern web technologies. Features dark mode, responsive design, and optimized performance.",
-      "technologies": [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Vercel"
-      ],
-      "features": [
-        "Responsive design for all devices",
-        "Dark/light mode toggle",
-        "Optimized performance and SEO",
-        "Contact form with email integration",
-        "Project showcase with filtering",
-        "Smooth animations and transitions"
-      ],
-      "challenges": [
-        "Achieving perfect Lighthouse scores",
-        "Implementing accessible design patterns",
-        "Optimizing for various screen sizes"
-      ],
-      "liveUrl": "",
-      "githubUrl": "https://github.com/abhishek-dongare/portfolio",
-      "imageUrl": "/images/projects/portfolio.jpg",
+      "liveUrl": "https://weatherteller.netlify.app/",
+      "githubUrl": "https://github.com/Abhii-d/weather-app-Node-js",
+      "imageUrl": "/images/projects/weather-app.jpg",
       "featured": false,
-      "status": "in-progress",
-      "category": "web"
+      "status": "completed",
+      "category": "web",
+      "icon": {
+        "viewBox": "0 0 24 24",
+        "path": "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9",
+        "color": "text-primary-600"
+      }
+    },
+    {
+      "id": "task-manager",
+      "name": "Task Manager",
+      "description": "A calendar-style task management web app to organize tasks by date.",
+      "longDescription": "An interactive and easy-to-use task manager application inspired by Google Calendar UI. It allows users to create, view, and manage tasks on specific dates. Built for simplicity and productivity, the app helps users stay organized by visually mapping tasks to their respective days. Designed with a clean interface and responsive layout, it's ideal for both personal and professional task tracking.",
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Netlify"
+      ],
+      "features": [
+        "Create and manage tasks associated with specific dates",
+        "Calendar-style layout for intuitive task visualization",
+        "Clean, minimal UI inspired by Google Calendar",
+        "Responsive design for desktop and mobile users",
+        "Persistent task storage across sessions (if implemented)"
+      ],
+      "challenges": [
+        "Creating a dynamic, responsive calendar layout",
+        "Ensuring intuitive task input and date selection UX",
+        "Balancing simplicity with core task management features"
+      ],
+      "liveUrl": "https://task-mananger.netlify.app/",
+      "githubUrl": "https://github.com/Abhii-d/Task-manager",
+      "imageUrl": "/images/projects/task-manager.jpg",
+      "featured": false,
+      "status": "completed",
+      "category": "web",
+      "icon": {
+        "viewBox": "0 0 24 24",
+        "path": "M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
+        "color": "text-green-600"
+      }
     }
   ]
 }
