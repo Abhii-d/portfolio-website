@@ -52,14 +52,14 @@ export default function Footer() {
             <div className="text-center md:text-right">
               <div className="flex justify-center md:justify-end space-x-4">
                 <a
-                  href="mailto:abhishek.dongare@example.com"
+                  href="mailto:abhi.dongare.personal@gmail.com"
                   className="text-slate-300 hover:text-white transition-colors"
                   aria-label="Email"
                 >
                   <span className="text-xl">📧</span>
                 </a>
                 <a
-                  href="https://linkedin.com/in/abhishek-dongare"
+                  href="https://www.linkedin.com/in/abhishek-dongare-bb066a191/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-300 hover:text-white transition-colors"
@@ -70,7 +70,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://github.com/abhishek-dongare"
+                  href="https://github.com/Abhii-d"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-300 hover:text-white transition-colors"
