@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -8,11 +9,35 @@ export default function Contact() {
     email: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // Replace these with your EmailJS credentials
+      await emailjs.send(
+        'service_76fd5le', // Get from EmailJS dashboard
+        'template_b1s9jh6', // Get from EmailJS dashboard
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        'mNjH0TQV52OChsAin' // Get from EmailJS dashboard
+      );
+      
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' }); // Reset form
+    } catch (error) {
+      console.error('Email send failed:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -92,10 +117,33 @@ export default function Contact() {
                     required
                   />
                 </div>
-                <button type="submit" className="btn-primary w-full text-lg py-3">
-                  Send Message
-                  <span className="ml-2">→</span>
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="btn-primary w-full text-lg py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  <span className="ml-2">{isSubmitting ? '⏳' : '→'}</span>
                 </button>
+                
+                {/* Status Messages */}
+                {submitStatus === 'success' && (
+                  <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                    <p className="text-green-800 text-sm flex items-center">
+                      <span className="mr-2">✅</span>
+                      Message sent successfully! I&apos;ll get back to you soon.
+                    </p>
+                  </div>
+                )}
+                
+                {submitStatus === 'error' && (
+                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                    <p className="text-red-800 text-sm flex items-center">
+                      <span className="mr-2">❌</span>
+                      Failed to send message. Please try again or email me directly.
+                    </p>
+                  </div>
+                )}
               </form>
             </div>
 

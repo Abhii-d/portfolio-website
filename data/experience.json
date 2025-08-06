@@ -9,10 +9,7 @@
       "description": "Recently promoted to Senior Software Developer, leading backend initiatives to improve scalability, system performance, and feature expansion across critical order processing systems.",
       "achievements": [
         "Promoted to Senior Software Developer in July 2025",
-        "Architected modular AWS Step Functions workflow to replace monolithic Lambdas, reducing order creation time by 50%",
-        "Enhanced order pipeline reliability with a retry system using PostgreSQL and AWS SQS, cutting manual intervention by 90%",
         "Designed and deployed secure IVR-support API with Snowflake analytics integration for improved call center operations",
-        "Developed tax recalculation Lambda improving post-shipment tax accuracy by 20%",
         "Mentored junior developers and supported technical decision-making in team architecture reviews"
       ],
       "technologies": [
@@ -36,6 +33,9 @@
       "location": "Remote",
       "description": "Worked on critical backend systems for order workflows, multi-line product support, and legacy system decoupling, contributing to performance, maintainability, and customer experience.",
       "achievements": [
+        "Architected modular AWS Step Functions workflow to replace monolithic Lambdas, reducing order creation time by 50%",
+        "Enhanced order pipeline reliability with a retry system using PostgreSQL and AWS SQS, cutting manual intervention by 90%",
+        "Developed tax recalculation Lambda improving post-shipment tax accuracy by 20%",
         "Implemented Matrix Multi-Line Ordering system allowing agents to combine multiple products in a single order",
         "Maintained backward compatibility with legacy systems while introducing new APIs for order modification",
         "Built microservice to manage calendar-based order holds using event-driven triggers, reducing Oracle system dependency",

@@ -12,6 +12,16 @@ export const metadata: Metadata = {
   keywords: ['Abhishek Dongare', 'Senior Software Developer', 'Node.js', 'TypeScript', 'AWS', 'Backend Developer', 'Cimpress'],
   authors: [{ name: 'Abhishek Dongare' }],
   creator: 'Abhishek Dongare',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '32x32' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

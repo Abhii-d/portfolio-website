@@ -42,47 +42,6 @@
       }
     ,
     {
-      "id": "ecommerce-api",
-      "name": "E-commerce REST API",
-      "description": "Scalable REST API for e-commerce platform with advanced features like inventory management and payment processing.",
-      "longDescription": "A comprehensive backend solution for e-commerce applications built with Node.js and PostgreSQL. Includes user authentication, product catalog management, shopping cart functionality, order processing, and payment integration.",
-      "technologies": [
-        "Node.js",
-        "TypeScript",
-        "Express.js",
-        "PostgreSQL",
-        "Redis",
-        "JWT",
-        "Stripe API",
-        "Docker"
-      ],
-      "features": [
-        "User authentication and authorization",
-        "Product catalog with search and filtering",
-        "Shopping cart and wishlist functionality",
-        "Order management system",
-        "Payment processing with Stripe",
-        "Inventory tracking and management",
-        "Admin dashboard API endpoints"
-      ],
-      "challenges": [
-        "Implementing secure payment processing",
-        "Optimizing database queries for large catalogs",
-        "Handling concurrent inventory updates"
-      ],
-      "liveUrl": "",
-      "githubUrl": "https://github.com/abhishek-dongare/ecommerce-api",
-      "imageUrl": "/images/projects/ecommerce-api.jpg",
-      "featured": true,
-      "status": "completed",
-      "category": "backend",
-      "icon": {
-        "viewBox": "0 0 24 24",
-        "path": "M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2",
-        "color": "text-primary-600"
-      }
-    },
-    {
       "id": "weather-app",
       "name": "Weather App",
       "description": "A TypeScript-based web app that displays real-time weather based on current or user-provided location.",
@@ -152,6 +111,40 @@
         "viewBox": "0 0 24 24",
         "path": "M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
         "color": "text-green-600"
+      }
+    },
+    {
+      "id": "snake-game",
+      "name": "Snake Game",
+      "description": "A classic Snake game built using HTML, CSS, and JavaScript with intuitive controls and vibrant design.",
+      "longDescription": "A fun and interactive browser-based Snake game developed using HTML, CSS, and JavaScript. The game features a sleek, colorful design with smooth controls using keyboard arrow keys. It's simple to play yet entertaining for users of all ages, making it an enjoyable project focused on game logic and frontend interactivity.",
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "features": [
+        "Classic snake gameplay with real-time movement",
+        "Keyboard arrow key controls for movement",
+        "Colorful and responsive game board",
+        "Score tracking during gameplay",
+        "Easy-to-understand UI for all age groups"
+      ],
+      "challenges": [
+        "Implementing real-time snake movement and collision detection",
+        "Handling increasing difficulty as the snake grows",
+        "Ensuring responsiveness across different devices and browsers"
+      ],
+      "liveUrl": "https://abhi-snake-game.netlify.app/",
+      "githubUrl": "https://github.com/Abhii-d/SnakeGame",
+      "imageUrl": "/images/projects/snake-game.jpg",
+      "featured": false,
+      "status": "completed",
+      "category": "game",
+      "icon": {
+        "viewBox": "0 0 24 24",
+        "path": "M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM11 13H9v2H7v-2H5v-2h2V9h2v2h2v2zm3.5 3c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67-1.5-1.5-1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S17.67 10 18.5 10s1.5.67 1.5 1.5-.67-1.5-1.5-1.5z",
+        "color": "text-red-600"
       }
     }
   ]
