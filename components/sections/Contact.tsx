@@ -168,10 +168,10 @@ export default function Contact() {
                   <div>
                     <div className="font-medium text-slate-900">Email</div>
                     <a
-                      href="mailto:abhishek.dongare@example.com"
+                      href="mailto:abhi.dongare.personal@gmail.com"
                       className="text-primary-500 hover:text-primary-600"
                     >
-                      abhishek.dongare@example.com
+                      abhi.dongare.personal@gmail.com
                     </a>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ export default function Contact() {
                   <div>
                     <div className="font-medium text-slate-900">LinkedIn</div>
                     <a
-                      href="https://linkedin.com/in/abhishek-dongare"
+                      href="https://www.linkedin.com/in/abhishek-dongare-bb066a191/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary-500 hover:text-primary-600"
@@ -204,7 +204,7 @@ export default function Contact() {
                   <div>
                     <div className="font-medium text-slate-900">GitHub</div>
                     <a
-                      href="https://github.com/abhishek-dongare"
+                      href="https://github.com/Abhii-d"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary-500 hover:text-primary-600"
