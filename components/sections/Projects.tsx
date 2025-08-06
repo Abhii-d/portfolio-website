@@ -1,5 +1,6 @@
 'use client';
-import { projects } from '@/data/projects.json';
+import projectsData from '@/data/projects.json';
+const { projects } = projectsData;
 
 export default function Projects() {
   // Separate featured and regular projects

@@ -35,7 +35,7 @@ export default function Contact() {
               Get In Touch
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            if you like algorithms and together we'll create what the World likes...
+            if you like algorithms and together we&apos;ll create what the World likes...
             </p>
           </div>
 

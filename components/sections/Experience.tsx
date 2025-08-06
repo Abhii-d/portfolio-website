@@ -1,4 +1,5 @@
-import {experiences} from '@/data/experience.json';
+import experienceData from '@/data/experience.json';
+const { experiences } = experienceData;
 
 export default function Experience() {
   return (

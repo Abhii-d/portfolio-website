@@ -1,16 +1,17 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 export default function Hero() {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const titles = [
+  
+  const titles = useMemo(() => [
     'Senior Software Developer',
     'Backend Specialist',
     'Node.js Expert',
     'AWS Enthusiast',
-  ];
+  ], []);
 
   useEffect(() => {
     const currentTitle = titles[currentIndex];
@@ -52,7 +53,7 @@ export default function Hero() {
           <div className="mb-6 animate-fade-in">
             <span className="text-2xl mb-4 block">👋</span>
             <p className="text-lg text-slate-600 font-medium">
-              Hello, I'm
+              Hello, I&apos;m
             </p>
           </div>
 
@@ -109,7 +110,7 @@ export default function Hero() {
               onClick={scrollToContact}
               className="btn-outline text-lg px-8 py-3 group"
             >
-              Let's Talk
+              Let&apos;s Talk
               <span className="ml-2 group-hover:scale-110 transition-transform">
                 📧
               </span>
