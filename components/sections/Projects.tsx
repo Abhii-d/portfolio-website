@@ -180,7 +180,7 @@ export default function Projects() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex-1 text-center text-sm py-2 group ${
+                      className={`flex-1 text-center text-sm py-2 group transition-all duration-200 ${
                         project.featured 
                           ? 'btn-primary' 
                           : 'btn-outline'
@@ -197,14 +197,14 @@ export default function Projects() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex-1 text-center text-sm py-2 group ${
+                      className={`flex-1 text-center text-sm py-2 group transition-all duration-200 ${
                         project.featured 
-                          ? 'btn-outline' 
-                          : 'btn-primary'
-                      }`}
+                          ? 'bg-white border border-primary-500 text-primary-600 hover:bg-primary-50 hover:text-primary-700' 
+                          : 'bg-primary-500 text-white hover:bg-primary-600 hover:text-white'
+                      } rounded-md font-medium`}
                     >
                       Code
-                      <span className="ml-1 group-hover:scale-110 transition-transform">
+                      <span className="ml-1 group-hover:scale-150 transition-transform">
                         ↗
                       </span>
                     </a>

@@ -9,9 +9,29 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Abhishek Dongare | Senior Software Developer',
   description: 'Backend specialist at Cimpress with expertise in Node.js, TypeScript, and AWS technologies. Portfolio showcasing projects and experience.',
-  keywords: ['Abhishek Dongare', 'Senior Software Developer', 'Node.js', 'TypeScript', 'AWS', 'Backend Developer', 'Cimpress'],
-  authors: [{ name: 'Abhishek Dongare' }],
+  keywords: [
+    'Abhishek Dongare', 
+    'Senior Software Developer', 
+    'Full Stack Developer',
+    'Node.js Developer', 
+    'TypeScript', 
+    'JavaScript',
+    'AWS', 
+    'Backend Developer', 
+    'API Development',
+    'Microservices',
+    'React',
+    'Cimpress',
+    'Portfolio',
+    'Software Engineer',
+    'Mumbai Developer',
+    'India'
+  ],
+  authors: [{ name: 'Abhishek Dongare', url: 'https://www.linkedin.com/in/abhishek-dongare-bb066a191/' }],
   creator: 'Abhishek Dongare',
+  publisher: 'Abhishek Dongare',
+  category: 'Technology',
+  classification: 'Portfolio Website',
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
@@ -25,20 +45,27 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://your-portfolio-url.com',
+    url: 'https://abhishek-dongare.vercel.app',
     title: 'Abhishek Dongare | Senior Software Developer',
     description: 'Backend specialist at Cimpress with expertise in Node.js, TypeScript, and AWS technologies.',
     siteName: 'Abhishek Dongare Portfolio',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Abhishek Dongare - Senior Software Developer',
+      }
+    ],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Abhishek Dongare | Senior Software Developer',
-    description: 'Backend specialist at Cimpress with expertise in Node.js, TypeScript, and AWS technologies.',
-    creator: '@abhishek_dongare',
-  },
+
   robots: {
     index: true,
     follow: true,
+    noarchive: false,
+    nosnippet: false,
+    noimageindex: false,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -46,6 +73,36 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  
+  // Verification tags for search engines
+  verification: {
+    google: 'your-google-verification-code', // Add your Google verification code
+    // yandex: 'your-yandex-verification-code',
+    // other: {
+    //   'facebook-domain-verification': 'your-facebook-verification-code',
+    // },
+  },
+  
+  // Application metadata
+  applicationName: 'Abhishek Dongare Portfolio',
+  referrer: 'origin-when-cross-origin',
+  generator: 'Next.js',
+  
+  // Canonical URL and language alternatives
+  alternates: {
+    canonical: 'https://abhishek-dongare.vercel.app',
+    languages: {
+      'en-US': 'https://abhishek-dongare.vercel.app',
+      // 'hi-IN': 'https://abhishek-dongare.vercel.app.com/hi', // If you add Hindi support
+    },
+  },
+  
+  // Format detection (prevents automatic linking)
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
 };
 
