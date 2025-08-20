@@ -140,7 +140,7 @@ export default function Contact() {
                   </label>
                   <div className="flex flex-col gap-2">
                     <Turnstile
-                      sitekey='0x4AAAAAABtbdWy9FpNUFxhC'
+                      sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY as string}
                       onVerify={(token: string) => {
                         setCaptchaError(null);
                         setCaptchaToken(token);
