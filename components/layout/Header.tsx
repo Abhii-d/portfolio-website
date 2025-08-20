@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +36,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100'
+          ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-slate-700'
           : 'bg-transparent'
       }`}
     >
@@ -44,31 +45,32 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <span className="text-2xl">👨‍💻</span>
-            <span className="font-bold text-xl text-slate-900">
+            <span className="font-bold text-xl text-slate-900 dark:text-slate-100">
               Abhishek Dongare
             </span>
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <button
               onClick={() => scrollToSection('about')}
-              className="text-slate-600 hover:text-primary-500 transition-colors font-medium"
+              className="text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('experience')}
-              className="text-slate-600 hover:text-primary-500 transition-colors font-medium"
+              className="text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-slate-600 hover:text-primary-500 transition-colors font-medium"
+              className="text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium"
             >
               Projects
             </button>
+            <ThemeToggle className="ml-2" />
             <button
               onClick={() => scrollToSection('contact')}
               className="btn-primary"
@@ -77,18 +79,20 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            onClick={toggleMobileMenu}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            aria-label="Toggle mobile menu"
-          >
-            <svg
-              className="w-6 h-6 text-slate-600 transform transition-transform duration-200"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
+            <button 
+              onClick={toggleMobileMenu}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors"
+              aria-label="Toggle mobile menu"
             >
+              <svg
+                className="w-6 h-6 text-slate-600 dark:text-slate-300 transform transition-transform duration-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
               {isMobileMenuOpen ? (
                 <path
                   strokeLinecap="round"
@@ -105,7 +109,8 @@ export default function Header() {
                 />
               )}
             </svg>
-          </button>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation Menu */}
@@ -114,22 +119,22 @@ export default function Header() {
             ? 'max-h-64 opacity-100' 
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <div className="py-4 space-y-2 border-t border-gray-100 bg-white/95 backdrop-blur-md">
+          <div className="py-4 space-y-2 border-t border-gray-100 dark:border-slate-700 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md">
             <button
               onClick={() => scrollToSection('about')}
-              className="block w-full text-left px-4 py-3 text-slate-600 hover:text-primary-500 hover:bg-primary-50 transition-colors font-medium rounded-lg mx-2"
+              className="block w-full text-left px-4 py-3 text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 hover:bg-primary-50 dark:hover:bg-slate-700 transition-colors font-medium rounded-lg mx-2"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('experience')}
-              className="block w-full text-left px-4 py-3 text-slate-600 hover:text-primary-500 hover:bg-primary-50 transition-colors font-medium rounded-lg mx-2"
+              className="block w-full text-left px-4 py-3 text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 hover:bg-primary-50 dark:hover:bg-slate-700 transition-colors font-medium rounded-lg mx-2"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="block w-full text-left px-4 py-3 text-slate-600 hover:text-primary-500 hover:bg-primary-50 transition-colors font-medium rounded-lg mx-2"
+              className="block w-full text-left px-4 py-3 text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 hover:bg-primary-50 dark:hover:bg-slate-700 transition-colors font-medium rounded-lg mx-2"
             >
               Projects
             </button>

@@ -46,34 +46,34 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-50 pt-20">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 pt-20">
       <div className="container">
         <div className="max-w-4xl mx-auto text-center">
           {/* Greeting */}
           <div className="mb-6 animate-fade-in">
             <span className="text-2xl mb-4 block">👋</span>
-            <p className="text-lg text-slate-600 font-medium">
+            <p className="text-lg text-slate-600 dark:text-slate-300 font-medium">
               Hello, I&apos;m
             </p>
           </div>
 
           {/* Name */}
-          <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 mb-6 animate-slide-up">
+          <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 dark:text-slate-100 mb-6 animate-slide-up">
             Abhishek Dongare
           </h1>
 
           {/* Animated Title */}
           <div className="mb-6">
-            <p className="text-xl lg:text-3xl text-primary-600 font-semibold min-h-[2.5rem] lg:min-h-[3.5rem]">
+            <p className="text-xl lg:text-3xl text-primary-600 dark:text-primary-400 font-semibold min-h-[2.5rem] lg:min-h-[3.5rem]">
               {displayText}
               <span className="animate-pulse">|</span>
             </p>
           </div>
 
           {/* Description */}
-          <p className="text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto mb-8 leading-relaxed animate-fade-in">
+          <p className="text-lg lg:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8 leading-relaxed animate-fade-in">
             🚀 Backend specialist at{' '}
-            <span className="font-semibold text-primary-600">Cimpress</span> with
+            <span className="font-semibold text-primary-600 dark:text-primary-400">Cimpress</span> with
             expertise in Node.js, TypeScript, and AWS technologies. Passionate
             about building scalable systems and delivering high-quality
             solutions.
@@ -82,16 +82,16 @@ export default function Hero() {
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-8 mb-10 animate-fade-in">
             <div className="text-center">
-              <div className="text-2xl font-bold text-slate-900">2.5+</div>
-              <div className="text-sm text-slate-600">Years Experience</div>
+              <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">2.5+</div>
+              <div className="text-sm text-slate-600 dark:text-slate-300">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-slate-900">10+</div>
-              <div className="text-sm text-slate-600">Projects Completed</div>
+              <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">10+</div>
+              <div className="text-sm text-slate-600 dark:text-slate-300">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-slate-900">🎯</div>
-              <div className="text-sm text-slate-600">Senior Developer</div>
+              <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">🎯</div>
+              <div className="text-sm text-slate-600 dark:text-slate-300">Senior Developer</div>
             </div>
           </div>
 

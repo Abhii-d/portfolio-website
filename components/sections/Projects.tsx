@@ -8,15 +8,15 @@ export default function Projects() {
   const regularProjects = projects.filter(project => !project.featured);
 
   return (
-    <section id="projects" className="section-padding bg-gradient-to-br from-primary-50 to-white">
+    <section id="projects" className="section-padding bg-gradient-to-br from-primary-50 to-white dark:from-slate-900 dark:to-slate-800">
       <div className="container">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-slate-900 dark:text-slate-50">
               Featured Projects
             </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
               A showcase of my recent work and side projects that demonstrate my
               skills and passion for development
             </p>
@@ -126,21 +126,21 @@ export default function Projects() {
                 )}
 
                 <div className={project.featured ? "text-center mb-4" : "mb-4"}>
-                  <h3 className={`font-bold text-slate-900 mb-2 ${project.featured ? 'text-xl' : 'text-xl'}`}>
+                  <h3 className={`font-bold text-slate-900 dark:text-slate-50 mb-2 ${project.featured ? 'text-xl' : 'text-xl'}`}>
                     {project.name}
                   </h3>
                   
-                  <p className="text-slate-600 leading-relaxed text-sm">
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">
                     {project.description}
                   </p>
                 </div>
 
                 {project.featured && project.features.length > 0 && (
                   <div className="mb-4">
-                    <h4 className="font-semibold text-slate-900 mb-2 text-center text-sm">
+                    <h4 className="font-semibold text-slate-900 dark:text-slate-50 mb-2 text-center text-sm">
                       Key Features
                     </h4>
-                    <ul className="space-y-1 text-slate-600">
+                    <ul className="space-y-1 text-slate-600 dark:text-slate-300">
                       {project.features.slice(0, 2).map((feature, index) => (
                         <li key={index} className="flex items-start space-x-2">
                           <span className="text-primary-500 mt-1 text-xs">•</span>
@@ -154,20 +154,20 @@ export default function Projects() {
                 {/* Technologies */}
                 <div className="mb-4">
                   <div className={`flex flex-wrap gap-1 ${project.featured ? 'justify-center' : 'justify-start'}`}>
-                    {project.technologies.slice(0, 3).map((tech) => (
+                     {project.technologies.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
                         className={`py-1 rounded-full text-xs font-medium ${
                           project.featured 
-                            ? 'px-2 bg-primary-100 text-primary-700' 
-                            : 'px-2 bg-slate-100 text-slate-600'
+                            ? 'px-2 bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300' 
+                            : 'px-2 bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300'
                         }`}
                       >
                         {tech}
                       </span>
                     ))}
-                    {project.technologies.length > 3 && (
-                      <span className="px-2 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">
+                     {project.technologies.length > 3 && (
+                      <span className="px-2 py-1 bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300 rounded-full text-xs font-medium">
                         +{project.technologies.length - 3}
                       </span>
                     )}

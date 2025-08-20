@@ -1,13 +1,4 @@
-import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
 
-/**
- * Combines class names using clsx and tailwind-merge
- * for optimal Tailwind CSS class handling
- */
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
 
 /**
  * Formats a date string to a more readable format
@@ -75,13 +66,4 @@ export function getEnvVar(key: string, defaultValue?: string): string {
     throw new Error(`Environment variable ${key} is not defined`);
   }
   return value || defaultValue!;
-}
-
-/**
- * Calculates reading time for text
- */
-export function calculateReadingTime(text: string): number {
-  const wordsPerMinute = 200;
-  const wordCount = text.split(/\s+/).length;
-  return Math.ceil(wordCount / wordsPerMinute);
 }

@@ -16,7 +16,7 @@
           "HTML"
         ],
         "features": [
-          "Real-time price tracking for MuscleBlaze supplements",
+          "Real-time price tracking on HealthKart",
           "Telegram alerts for percentage and absolute price drops",
           "Scheduled monitoring with retry logic and failure handling",
           "Historical price tracking with database support",

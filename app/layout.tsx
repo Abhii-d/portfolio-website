@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import { ThemeProvider } from '@/lib/theme-context';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -114,9 +115,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
+        {/* Turnstile script is not force-injected in production; react-turnstile loads it as needed */}
       </body>
     </html>
   );
