@@ -120,7 +120,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
           <Footer />
         </ThemeProvider>
-        {/* Turnstile script is not force-injected in production; react-turnstile loads it as needed */}
       </body>
     </html>
   );

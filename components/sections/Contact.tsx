@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Turnstile from 'react-turnstile';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -10,28 +10,17 @@ export default function Contact() {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-  const [captchaError, setCaptchaError] = useState<string | null>(null);
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | 'rate_limited' | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
-
-    if (!captchaToken) {
-      setCaptchaError('Please complete the CAPTCHA');
-      setIsSubmitting(false);
-      return;
-    }
-
-    if (!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY) {
-      setCaptchaError('Server misconfiguration: missing Turnstile site key');
-      setIsSubmitting(false);
-      return;
-    }
+    setErrorMessage('');
 
     try {
+      // First check rate limiting
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -39,19 +28,39 @@ export default function Contact() {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          captchaToken,
         }),
       });
+      
       const data = await res.json();
-      if (!res.ok || !data?.success) {
-        throw new Error(data?.error || 'Failed to send message');
+      
+      if (res.status === 429) {
+        setSubmitStatus('rate_limited');
+        setErrorMessage(data.error || 'Rate limit exceeded. Please try again later.');
+        return;
       }
+      
+      if (!res.ok || !data?.success) {
+        throw new Error(data?.error || 'Rate limit check failed');
+      }
+
+      // Rate limit passed, now send email via EmailJS
+      await emailjs.send(
+        process.env.EMAILJS_SERVICE_ID || '', // Your EmailJS service ID
+        process.env.EMAIL_JS_TEMPLATE_ID || '', // Your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        process.env.EMAILJS_PUBLIC_KEY || '' // Your EmailJS public key
+      );
+      
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
-      setCaptchaToken(null);
     } catch (error) {
       console.error('Email send failed:', error);
       setSubmitStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -134,28 +143,9 @@ export default function Contact() {
                     required
                   />
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                    CAPTCHA
-                  </label>
-                  <div className="flex flex-col gap-2">
-                    <Turnstile
-                      sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY as string}
-                      onVerify={(token: string) => {
-                        setCaptchaError(null);
-                        setCaptchaToken(token);
-                      }}
-                      onExpire={() => setCaptchaToken(null)}
-                      onError={() => setCaptchaError('CAPTCHA error, please retry')}
-                    />
-                    {captchaError && (
-                      <p className="text-sm text-red-600">{captchaError}</p>
-                    )}
-                  </div>
-                </div>
                 <button 
                   type="submit" 
-                  disabled={isSubmitting || !captchaToken}
+                  disabled={isSubmitting}
                   className="btn-primary w-full text-lg py-3 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -164,19 +154,28 @@ export default function Contact() {
                 
                 {/* Status Messages */}
                 {submitStatus === 'success' && (
-                  <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <p className="text-green-800 text-sm flex items-center">
+                  <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                    <p className="text-green-800 dark:text-green-200 text-sm flex items-center">
                       <span className="mr-2">✅</span>
                       Message sent successfully! I&apos;ll get back to you soon.
                     </p>
                   </div>
                 )}
                 
+                {submitStatus === 'rate_limited' && (
+                  <div className="mt-4 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
+                    <p className="text-yellow-800 dark:text-yellow-200 text-sm flex items-center">
+                      <span className="mr-2">⏰</span>
+                      {errorMessage}
+                    </p>
+                  </div>
+                )}
+                
                 {submitStatus === 'error' && (
-                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-                    <p className="text-red-800 text-sm flex items-center">
+                  <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+                    <p className="text-red-800 dark:text-red-200 text-sm flex items-center">
                       <span className="mr-2">❌</span>
-                      Failed to send message. Please try again or email me directly.
+                      {errorMessage || 'Failed to send message. Please try again or email me directly.'}
                     </p>
                   </div>
                 )}

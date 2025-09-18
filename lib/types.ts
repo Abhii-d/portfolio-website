@@ -59,14 +59,11 @@ export interface ContactForm {
   message: string;
 }
 
-export interface ContactApiRequest extends ContactForm {
-  captchaToken: string;
-}
-
 export interface ContactApiResponse {
   success: boolean;
   error?: string;
   message?: string;
+  rateLimitExceeded?: boolean;
 }
 
 // API Response types
